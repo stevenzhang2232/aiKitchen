@@ -81,6 +81,22 @@ describe('recipe check (acceptance 20)', () => {
     expect(r.errors.join(' ')).toMatch(/Peanut/);
   });
 
+  it('accepts a generic name for an ingredient the dish uses ("pork" for pork belly)', () => {
+    const porkBelly = { ...pork, id: 30, name: 'Pork belly', aliases: ['五花肉'] };
+    const foods = [...FOODS, porkBelly];
+    const inv = { ...inventory, [porkBelly.id]: { weight: 500 } };
+    const d = dish({
+      name: 'Braised pork belly',
+      ingredients: [{ foodId: porkBelly.id, amount: 400, unit: 'g' }],
+      seasonings: [lightSoy.id],
+      steps: ['Cut the pork belly into cubes.', 'Brown the pork, then braise with soy sauce.'],
+    });
+    expect(validateDishes([d], { ...base, foods, inventory: inv }).errors).toEqual([]);
+    // But a generic name does not cover a different food.
+    const d2 = dish({ ...d, steps: ['Cut the pork belly.', 'Add the eggs.'] });
+    expect(validateDishes([d2], { ...base, foods, inventory: inv }).ok).toBe(false);
+  });
+
   it('moves seasonings listed as ingredients to the seasoning list', () => {
     const r = validateDishes([dish({ ingredients: [{ foodId: tomato.id, amount: 1, unit: 'pcs' }, { foodId: salt.id, amount: 2, unit: 'g' }], steps: ['Salt the tomato.'] })], base);
     expect(r.ok).toBe(true);

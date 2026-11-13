@@ -79,6 +79,15 @@ function escapeRe(s: string): string {
  * `blocked` phrases (e.g. names of missing items) are removed before scanning.
  */
 export function findMentionedFoods(text: string, foods: Food[], blocked: string[] = []): Set<number> {
+  return new Set(findMentions(text, foods, blocked).map((m) => m.foodId));
+}
+
+export interface Mention {
+  foodId: number;
+  term: string;
+}
+
+export function findMentions(text: string, foods: Food[], blocked: string[] = []): Mention[] {
   let work = ` ${normalizeText(text).replace(/[^a-z0-9 ]+/g, ' ')} `;
   for (const b of blocked) {
     const n = normalizeText(b).replace(/[^a-z0-9 ]+/g, ' ').trim();
@@ -87,15 +96,29 @@ export function findMentionedFoods(text: string, foods: Food[], blocked: string[
   for (const w of ALWAYS_ALLOWED) {
     work = work.replace(new RegExp(`(?<=\\W)${escapeRe(w)}(?=\\W)`, 'g'), ' # ');
   }
-  const found = new Set<number>();
+  const found: Mention[] = [];
   for (const term of buildTerms(foods)) {
     const re = new RegExp(`(?<=\\W)${escapeRe(term.text)}(?:es|s)?(?=\\W)`, 'g');
     if (re.test(work)) {
-      found.add(term.foodId);
+      found.push({ foodId: term.foodId, term: term.text });
       work = work.replace(re, ' # ');
     }
   }
   return found;
+}
+
+/**
+ * True when a mentioned word is a shorter, generic name of an allowed food,
+ * e.g. "pork" when the dish uses "Pork belly", or "soy sauce" with "Dark soy sauce".
+ */
+function isGenericOfAllowed(term: string, allowed: Set<number>, byId: Map<number, Food>): boolean {
+  const re = new RegExp(`(^|\\W)${escapeRe(term)}(es|s)?(\\W|$)`);
+  for (const id of allowed) {
+    const f = byId.get(id);
+    if (!f) continue;
+    if ([f.name, ...f.aliases].some((t) => re.test(normalizeText(t)))) return true;
+  }
+  return false;
 }
 
 function stockFor(inv: Inventory, foodId: number): KindAmounts {
@@ -190,8 +213,8 @@ export function validateDishes(input: Dish[], opts: ValidateOptions): Validation
       }
     }
     const text = [...dish.steps, ...dish.ingredients.map((i) => i.howTo ?? '')].join('\n');
-    for (const id of findMentionedFoods(text, opts.foods, blocked)) {
-      if (!allowed.has(id)) {
+    for (const { foodId: id, term } of findMentions(text, opts.foods, blocked)) {
+      if (!allowed.has(id) && !isGenericOfAllowed(term, allowed, byId)) {
         const f = byId.get(id)!;
         errors.push(
           f.isSeasoning
