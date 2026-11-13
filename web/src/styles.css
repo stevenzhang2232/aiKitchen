@@ -1,0 +1,9 @@
+:root { font-family: system-ui, sans-serif; color: #222; background: #fafaf8; }
+body { margin: 0; }
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+.topbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 8px 16px; border-bottom: 1px solid #e5e5e0; background: #fff; }
+.brand { font-weight: 600; }
+.tabs { display: flex; gap: 4px; }
+.tab { border: none; background: none; padding: 8px 14px; border-radius: 8px; cursor: pointer; }
+.tab.active { background: #f0efe9; font-weight: 600; }
+.page { flex: 1; padding: 16px; }

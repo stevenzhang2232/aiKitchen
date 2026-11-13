@@ -1,0 +1,16 @@
+{
+  "name": "@kitchen/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "dev": "tsx watch src/main.ts"
+  },
+  "dependencies": {
+    "@fastify/static": "^10.1.10",
+    "@kitchen/core": "*",
+    "fastify": "^5.12.8",
+    "tsx": "^4.23.15"
+  }
+}
