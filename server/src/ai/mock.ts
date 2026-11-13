@@ -87,7 +87,7 @@ export class MockAiService implements AiService {
 
   private namedDish(ctx: RecipeContext): Dish {
     const want = (ctx.dishName ?? '').toLowerCase();
-    const used = ctx.stock.filter((s) => want.includes(s.name.toLowerCase()));
+    const used = ctx.stock.filter((s) => s.name.toLowerCase().split(' ').some((w) => w.length > 3 && want.includes(w)));
     const missing: Dish['missing'] = [];
     // Words in the dish name that are not in stock become "missing" (simple test behaviour).
     for (const word of ['chicken', 'peanuts', 'beef', 'shrimp']) {

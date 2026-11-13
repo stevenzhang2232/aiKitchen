@@ -220,3 +220,25 @@ input:focus, select:focus, textarea:focus, button:focus-visible { outline: 2px s
   .settings-nav { flex-direction: row; flex-wrap: wrap; flex-basis: 100%; }
   .receipt-row { grid-template-columns: 1fr 1fr; }
 }
+
+.mode-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 12px; }
+.mode-card h2 { margin: 0; }
+.pick-layout { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+.pick-layout > section { flex: 2 1 22rem; min-width: 0; }
+.cart { flex: 1 1 14rem; min-width: 0; position: sticky; top: 64px; }
+.pick-list, .cart-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.pick-row { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--border); }
+.cart-list li { display: flex; align-items: center; gap: 6px; }
+.step-btn { width: 2rem; height: 2rem; padding: 0; border-radius: 50%; font-size: 1.1rem; }
+.pick-qty { min-width: 4.5rem; text-align: center; }
+.servings-row { align-items: center; }
+.servings-input { width: 4.5rem; text-align: center; }
+.dish-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 12px; }
+.dish-card { display: flex; flex-direction: column; gap: 4px; text-align: left; cursor: pointer; }
+.dish-card:hover { border-color: var(--accent); background: var(--surface); }
+.row.space { justify-content: space-between; align-items: baseline; }
+.recipe h3 { margin-top: 4px; }
+.ing-list, .steps { margin: 0; padding-left: 1.3rem; display: flex; flex-direction: column; gap: 4px; }
+.deduct-row { display: flex; align-items: center; gap: 8px; }
+.deduct-row input { width: 6rem; }
+@media (max-width: 720px) { .cart { position: static; } }

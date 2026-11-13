@@ -6,6 +6,7 @@ import { Store } from './store.js';
 import { HttpError } from './errors.js';
 import { registerFridgeRoutes } from './routes/fridge.js';
 import { registerAiRoutes } from './routes/ai.js';
+import { registerCookRoutes } from './routes/cook.js';
 import { AiConfigStore, capabilities } from './ai/config.js';
 import { RealAiService, type AiService } from './ai/service.js';
 import { MockAiService } from './ai/mock.js';
@@ -112,6 +113,7 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
   }
   registerFridgeRoutes(app, store, () => ({ ai: aiInfo() }));
   registerAiRoutes(app, { store, config, getAi, worker });
+  registerCookRoutes(app, { store, getAi });
 
   if (opts.webDist && fs.existsSync(opts.webDist)) {
     await app.register(fastifyStatic, { root: opts.webDist, wildcard: false });
