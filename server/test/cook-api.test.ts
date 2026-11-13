@@ -180,3 +180,64 @@ describe('I cooked it → history (acceptance 23, 26)', () => {
     expect((await t.state()).history).toEqual([]);
   });
 });
+
+describe('the server never shows a recipe that breaks the rules (acceptance 20)', () => {
+  it('rejects a seasoning the user marked as don’t have, and unlisted stock in the steps', async () => {
+    await t.call('POST', `/api/seasonings/${id('Sugar')}`, { have: false });
+    let calls = 0;
+    t.app.ctx.mock.suggestDishes = async () => {
+      calls++;
+      const dishes = [
+        {
+          name: 'Sweet tomato eggs',
+          minutes: 10,
+          servings: 2,
+          ingredients: [{ foodId: id('Tomato'), amount: 1, unit: 'pcs' as const }, { foodId: id('Egg'), amount: 2, unit: 'pcs' as const }],
+          seasonings: calls === 1 ? [id('Sugar')] : [id('Salt')],
+          missing: [],
+          steps: calls === 1 ? ['Scramble the eggs with tomato and sugar.', 'Top with pork floss.'] : ['Scramble the eggs with the tomato and a pinch of salt.'],
+        },
+      ];
+      return { dishes, raw: JSON.stringify({ dishes }) };
+    };
+    const r = await t.call('POST', '/api/cook/suggest', { mode: 'suggest', servings: 2 });
+    expect(calls).toBe(2);
+    expect(r.body.status).toBe('ok');
+    expect(r.body.dishes[0].seasoningNames).toEqual(['Salt']);
+  });
+
+  it('gives up rather than show a dish using more than in stock', async () => {
+    t.app.ctx.mock.suggestDishes = async () => {
+      const dishes = [{
+        name: 'Egg feast', minutes: 10, servings: 2,
+        ingredients: [{ foodId: id('Egg'), amount: 12, unit: 'pcs' as const }],
+        seasonings: [], missing: [], steps: ['Boil the eggs.'],
+      }];
+      return { dishes, raw: JSON.stringify({ dishes }) };
+    };
+    const r = await t.call('POST', '/api/cook/suggest', { mode: 'suggest', servings: 2 });
+    expect(r.body.status).toBe('cannot');
+    expect(r.body.problems.join(' ')).toMatch(/Egg: the dishes need 12 pcs in total but only 6 pcs is available/);
+  });
+});
+
+describe('foods to avoid are enforced, not just requested', () => {
+  it('rejects recipes using an avoided food', async () => {
+    await t.call('PUT', '/api/taste', { spice: 'mild', avoid: ['鸡蛋', 'cilantro'], cuisines: [] });
+    const seen: number[][] = [];
+    t.app.ctx.mock.suggestDishes = async (ctx) => {
+      seen.push(ctx.stock.map((s) => s.foodId));
+      const dishes = [{
+        name: 'Egg and tomato', minutes: 10, servings: 2,
+        ingredients: [{ foodId: id('Egg'), amount: 2, unit: 'pcs' as const }, { foodId: id('Tomato'), amount: 1, unit: 'pcs' as const }],
+        seasonings: [], missing: [], steps: ['Scramble the eggs with tomato.'],
+      }];
+      return { dishes, raw: JSON.stringify({ dishes }) };
+    };
+    const r = await t.call('POST', '/api/cook/suggest', { mode: 'suggest', servings: 2 });
+    expect(seen[0]).not.toContain(id('Egg'));
+    expect(seen[0]).toContain(id('Tomato'));
+    expect(r.body.status).toBe('cannot');
+    expect(r.body.problems.join(' ')).toMatch(/Egg is not in stock/);
+  });
+});

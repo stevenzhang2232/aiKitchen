@@ -14,7 +14,7 @@ interface PresentedDish {
   name: string;
   minutes: number;
   servings: number;
-  ingredients: { foodId: number; name: string; amount: number; unit: Unit; display: string; howTo?: string }[];
+  ingredients: { foodId: number; name: string; amount: number; unit: Unit; display: string; exact: string; howTo?: string }[];
   seasonings: number[];
   seasoningNames: string[];
   missing: MissingItem[];
@@ -278,7 +278,7 @@ function Recipe({ dish, onBack, onCooked }: { dish: PresentedDish; onBack: () =>
         <ul className="ing-list">
           {dish.ingredients.map((i) => (
             <li key={`${i.foodId}-${i.unit}`}>
-              <strong>{i.name}</strong>: {i.howTo ? `${i.howTo} (${i.display})` : i.display}
+              <strong>{i.name}</strong>: {i.howTo ? `${i.howTo} (${i.exact})` : i.display}
             </li>
           ))}
           {dish.missing.map((m) => (

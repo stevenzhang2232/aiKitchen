@@ -70,6 +70,7 @@ export function registerCookRoutes(app: FastifyInstance, deps: { store: Store; g
           ...i,
           name: foods.get(i.foodId)?.name ?? `#${i.foodId}`,
           display: friendlyAmount(base, available[i.foodId]?.[kind] ?? 0, i.unit),
+          exact: formatAmount(base, i.unit),
           howTo: i.howTo?.trim() || undefined,
         };
       }),
@@ -107,15 +108,18 @@ export function registerCookRoutes(app: FastifyInstance, deps: { store: Store; g
       if (dishName.length > 80) bad('Keep the dish name under 80 characters.');
     }
 
+    const foods = store.foods();
     const fridge = buildInventory(store.batches());
-    const available = mode === 'pick' ? cartInventory() : fridge;
-    if (mode === 'pick' && !Object.keys(available).length) bad('Pick some ingredients first.');
+    const picked = mode === 'pick' ? cartInventory() : fridge;
+    if (mode === 'pick' && !Object.keys(picked).length) bad('Pick some ingredients first.');
+    // Foods the user avoids (allergies, dislikes) are never offered to the AI, so the checker rejects them.
+    const avoided = new Set((taste?.avoid ?? []).map((n) => findFoodByName(foods, n)?.id).filter((x): x is number => x != null));
+    const available: Inventory = Object.fromEntries(Object.entries(picked).filter(([fid]) => !avoided.has(Number(fid))));
     const stock = stockLines(available);
     if (mode === 'suggest' && !stock.length) {
       return { status: 'cannot', reason: 'Your fridge is empty, so there is nothing to cook with yet.' };
     }
-    const owned = store.ownedSeasonings();
-    const foods = store.foods();
+    const owned = new Set([...store.ownedSeasonings()].filter((fid) => !avoided.has(fid)));
     const ctx: RecipeContext = {
       mode,
       servings,

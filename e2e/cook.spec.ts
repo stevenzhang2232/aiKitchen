@@ -45,6 +45,8 @@ test('Suggest for me: taste asked once, 1–3 dishes with time, recipe, then I c
   const recipe = page.getByRole('article');
   await expect(recipe.getByRole('heading', { name: 'Steps' })).toBeVisible();
   await expect(recipe).toContainText('3 people');
+  await expect(recipe).toContainText("Pork: half of what's left (150 g)");
+  expect(await recipe.textContent()).not.toContain("(half of what's left (");
 
   // Leaving without confirming changes nothing.
   await page.getByRole('button', { name: 'Fridge' }).click();
