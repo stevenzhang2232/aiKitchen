@@ -203,3 +203,20 @@ input:focus, select:focus, textarea:focus, button:focus-visible { outline: 2px s
   .batch-row { grid-template-columns: 1fr 1fr; }
   .alert-badge { margin-left: 0; }
 }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.button-like { display: inline-flex; align-items: center; border: 1px solid var(--border-strong); border-radius: 8px; padding: 6px 12px; cursor: pointer; background: var(--surface); position: relative; }
+.button-like.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+.button-like:focus-within { outline: 2px solid var(--accent); outline-offset: 1px; }
+.camera-view { width: 100%; max-height: 50vh; background: #000; border-radius: 10px; }
+.receipt-table { display: flex; flex-direction: column; gap: 6px; }
+.receipt-row { display: grid; grid-template-columns: minmax(8rem, 2fr) minmax(4rem, 1fr) minmax(5rem, 1fr) auto; gap: 6px; align-items: center; }
+.ok-text { color: var(--ok); margin: 0; }
+.settings { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.settings-nav { display: flex; flex-direction: column; gap: 2px; flex: 0 1 12rem; min-width: 10rem; }
+.settings-nav .tab { text-align: left; }
+.settings-body { flex: 1 1 24rem; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+@media (max-width: 720px) {
+  .settings-nav { flex-direction: row; flex-wrap: wrap; flex-basis: 100%; }
+  .receipt-row { grid-template-columns: 1fr 1fr; }
+}
