@@ -1,0 +1,499 @@
+{
+  "tomato": {
+    "file": "Tomato_je.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tomato_je.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "artist": "Softeis"
+  },
+  "potato": {
+    "file": "Patates.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Patates.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Scott Bauer, USDA ARS"
+  },
+  "carrot": {
+    "file": "Vegetable-Carrot-Bundle-wStalks.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Vegetable-Carrot-Bundle-wStalks.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Evan-Amos"
+  },
+  "onion": {
+    "file": "Mixed_onions.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Mixed_onions.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Colin"
+  },
+  "cucumber": {
+    "file": "ARS_cucumber.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:ARS_cucumber.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Stephen Ausmus, USDA ARS"
+  },
+  "eggplant": {
+    "file": "Solanum_melongena_24_08_2012_(1).JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Solanum_melongena_24_08_2012_(1).JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Joydeep"
+  },
+  "napa_cabbage": {
+    "file": "Napa_cabbages.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Napa_cabbages.png",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "artist": "Bayartai"
+  },
+  "cauliflower": {
+    "file": "Chou-fleur_02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Chou-fleur_02.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Coyau"
+  },
+  "bell_pepper": {
+    "file": "Green-Yellow-Red-Pepper-2009.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Green-Yellow-Red-Pepper-2009.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Kham Tran - www.khamtran.com"
+  },
+  "chili_pepper": {
+    "file": "Madame_Jeanette_and_other_chillies.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Madame_Jeanette_and_other_chillies.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Takeaway"
+  },
+  "leafy_greens": {
+    "file": "Spinacia_oleracea_Spinazie_bloeiend.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Spinacia_oleracea_Spinazie_bloeiend.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "artist": "Rasbak"
+  },
+  "lettuce": {
+    "file": "Iceberg_lettuce_in_SB.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Iceberg_lettuce_in_SB.jpg",
+    "license": "CC BY 1.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/1.0",
+    "artist": "en:User:Geographer"
+  },
+  "celery": {
+    "file": "Celery_1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Celery_1.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Lombroso"
+  },
+  "zucchini": {
+    "file": "CSA-Striped-Zucchini.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:CSA-Striped-Zucchini.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Evan-Amos"
+  },
+  "pumpkin": {
+    "file": "FrenchMarketPumpkinsB.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:FrenchMarketPumpkinsB.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Infrogmation of New Orleans"
+  },
+  "corn": {
+    "file": "CookedCornOnTheCob.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:CookedCornOnTheCob.JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Jonathunder"
+  },
+  "sweet_potato": {
+    "file": "Ipomoea_batatas_006.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Ipomoea_batatas_006.JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Llez"
+  },
+  "daikon": {
+    "file": "Different_kinds_of_White_Radish.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Different_kinds_of_White_Radish.png",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "KimYunmi"
+  },
+  "bean_sprouts": {
+    "file": "Organic_mixed_beans_shoots.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Organic_mixed_beans_shoots.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "artist": "Unknown"
+  },
+  "lotus_root": {
+    "file": "Pickled lotus root.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pickled_lotus_root.jpg",
+    "license": "CC BY 2.0 kr",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/kr/deed.en",
+    "artist": "델제수"
+  },
+  "mushroom": {
+    "file": "ChampignonMushroom.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:ChampignonMushroom.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "artist": "chris_73"
+  },
+  "enoki": {
+    "file": "Flammulina_velutipes_(Enokitake,_winter_mushroom).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flammulina_velutipes_(Enokitake,_winter_mushroom).jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist": "frankenstoen"
+  },
+  "wood_ear": {
+    "file": "Wood_ear_mushroom_farm.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Wood_ear_mushroom_farm.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "트리오구"
+  },
+  "scallion": {
+    "file": "CSA-Red-Spring-Onions.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:CSA-Red-Spring-Onions.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Evan-Amos"
+  },
+  "ginger": {
+    "file": "Liat Portal for Foodie Disorder - Fresh ginger root from San Francisco farmers market.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Fresh_ginger_root_from_San_Francisco_farmers_market.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "HaJunkiyada"
+  },
+  "garlic": {
+    "file": "Opened garlic bulb with garlic clove.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Opened_garlic_bulb_with_garlic_clove.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "Dubravko Sorić SoraZG on Flickr"
+  },
+  "cilantro": {
+    "file": "Bunches of coriander leaves.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Bunches_of_coriander_leaves.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Kpsudeep"
+  },
+  "banana": {
+    "file": "Bananavarieties.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Bananavarieties.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "artist": "TimothyPilgrim"
+  },
+  "orange": {
+    "file": "Oranges_-_whole-halved-segment.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Ivar Leidus"
+  },
+  "lemon": {
+    "file": "P1030323.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:P1030323.JPG",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Elena Chochkova"
+  },
+  "strawberry": {
+    "file": "Garden_strawberry_(Fragaria_×_ananassa)_single2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_single2.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Ivar Leidus"
+  },
+  "grape": {
+    "file": "Grapes,_Rostov-on-Don,_Russia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Grapes,_Rostov-on-Don,_Russia.jpg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "artist": "Vyacheslav Argenberg"
+  },
+  "pear": {
+    "file": "Pears.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pears.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Keith Weller"
+  },
+  "mango": {
+    "file": "Mangos_-_single_and_halved.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Mangos_-_single_and_halved.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Ivar Leidus"
+  },
+  "kiwi": {
+    "file": "Kiwi (Actinidia chinensis) 1 Luc Viatour.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kiwi_(Actinidia_chinensis)_1_Luc_Viatour.jpg",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "artist": "Luc Viatour"
+  },
+  "watermelon": {
+    "file": "Taiwan_2009_Tainan_City_Organic_Farm_Watermelon_FRD_7962.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Taiwan_2009_Tainan_City_Organic_Farm_Watermelon_FRD_7962.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Fred Hsu (Wikipedia:User:Fred Hsu on en.wikipedia)"
+  },
+  "pork": {
+    "file": "Schweinebauch-2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Schweinebauch-2.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Rainer Zenz"
+  },
+  "pork_ribs": {
+    "file": "Spareribs_20160506_182617113.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Spareribs_20160506_182617113.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Edo de Roo"
+  },
+  "ground_meat": {
+    "file": "Sausage_making-H-1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sausage_making-H-1.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "László Szalai (Beyond silence)"
+  },
+  "beef": {
+    "file": "Standing-rib-roast.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Standing-rib-roast.jpg",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "artist": "Michael C. Berch, aka MCB at en.wikipedia"
+  },
+  "chicken_breast": {
+    "file": "Kycklingfilé.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kycklingfil%C3%A9.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Dnor"
+  },
+  "chicken_thigh": {
+    "file": "Kycklingfilé.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kycklingfil%C3%A9.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Dnor"
+  },
+  "chicken_wings": {
+    "file": "Kycklingfilé.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kycklingfil%C3%A9.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Dnor"
+  },
+  "lamb": {
+    "file": "Lamb_meat_(1).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Lamb_meat_(1).jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "I would appreciate being notified if you use my work outside Wikimedia. Do not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain. If you would like special permission to use, license, or purchase the image please contact me to negotiate terms. More of my work can be found in my personal gallery."
+  },
+  "bacon": {
+    "file": "Made20bacon.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Made20bacon.png",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Made20rder555"
+  },
+  "ham": {
+    "file": "Ham_(4).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ham_(4).jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Renee Comet (Photographer)"
+  },
+  "sausage": {
+    "file": "Wurstplatte.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Wurstplatte.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Alice Wiegand"
+  },
+  "shrimp": {
+    "file": "Spicy_fried_King_Prawns.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Spicy_fried_King_Prawns.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "rovingI"
+  },
+  "fish": {
+    "file": "Fish_stuffed_with_Thai_herbs.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fish_stuffed_with_Thai_herbs.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "User:Mattes"
+  },
+  "salmon": {
+    "file": "Sashimi_-_Maguro_Restaurant,_Bangna,_Bangkok_(44856596864).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sashimi_-_Maguro_Restaurant,_Bangna,_Bangkok_(44856596864).jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "Vee Satayamas from Bangkok, Thailand"
+  },
+  "egg": {
+    "file": "Huevo_frito.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Huevo_frito.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Horacio Cambeiro"
+  },
+  "milk": {
+    "file": "Glass_of_Milk_(33657535532).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Glass_of_Milk_(33657535532).jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "NIAID"
+  },
+  "yogurt": {
+    "file": "Joghurt.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Joghurt.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "artist": "No machine-readable author provided. Rainer Zenz assumed (based on copyright claims)."
+  },
+  "cheese": {
+    "file": "Cheese_platter.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cheese_platter.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "artist": "Unknown"
+  },
+  "butter": {
+    "file": "Švédský_koláč_naruby_904_(cropped).JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:%C5%A0v%C3%A9dsk%C3%BD_kol%C3%A1%C4%8D_naruby_904_(cropped).JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Matěj Baťha"
+  },
+  "rice": {
+    "file": "Uncooked ST25 rice on bamboo surface.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Uncooked_ST25_rice_on_bamboo_surface.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "VinhNguyen.1257"
+  },
+  "noodles": {
+    "file": "Dalian_Liaoning_China_Noodlemaker-01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Dalian_Liaoning_China_Noodlemaker-01.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "CEphoto, Uwe Aranas"
+  },
+  "rice_noodles": {
+    "file": "Rice_vermicelli.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Rice_vermicelli.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Popo le Chien"
+  },
+  "pasta": {
+    "file": "(Pasta)_by_David_Adam_Kess_(pic.2).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:(Pasta)_by_David_Adam_Kess_(pic.2).jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "David Adam Kess"
+  },
+  "bread": {
+    "file": "Korb_mit_Brötchen.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Korb_mit_Br%C3%B6tchen.JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "3268zauber"
+  },
+  "flour": {
+    "file": "Soy_powder.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Soy_powder.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Tiia Monto"
+  },
+  "dumplings": {
+    "file": "台灣南投草屯水餃Nantou,_Taiwan_Caotun_dumplings.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E5%8F%B0%E7%81%A3%E5%8D%97%E6%8A%95%E8%8D%89%E5%B1%AF%E6%B0%B4%E9%A4%83Nantou,_Taiwan_Caotun_dumplings.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Yeepunchmen"
+  },
+  "oats": {
+    "file": "Rolled oats in bowl 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Rolled_oats_in_bowl_2.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Bodhi Peace"
+  },
+  "tofu": {
+    "file": "Japanese_SilkyTofu_(Kinugoshi_Tofu).JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Japanese_SilkyTofu_(Kinugoshi_Tofu).JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "artist": "DryPot"
+  },
+  "dried_tofu": {
+    "file": "豆干.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E8%B1%86%E5%B9%B2.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "EHALAM BorG 600M"
+  },
+  "peanut": {
+    "file": "Roasted Peanuts with shell.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Roasted_Peanuts_with_shell.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Sanjay Acharya"
+  },
+  "edamame": {
+    "file": "Edamame_by_Zesmerelda_in_Chicago.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Edamame_by_Zesmerelda_in_Chicago.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist": "Tammy Green (aka Zesmerelda) from Chicago Upscale Dining + Lounge Republic Pan-Asian Restaurant [1] in Ontario &amp; Rush Street, Chicago, Illinois 60611"
+  },
+  "cabbage": {
+    "file": "Cabbage in a stack.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cabbage_in_a_stack.jpg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "artist": "Jeffery Martin"
+  },
+  "broccoli": {
+    "file": "Fire-Tuscarora Organic Growers - Broccoli head.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fire-Tuscarora_Organic_Growers_-_Broccoli_head.jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "U.S. Department of Agriculture"
+  },
+  "asparagus": {
+    "file": "Asparagus (5661403316).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Asparagus_(5661403316).jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "artist": "bongo vongo"
+  },
+  "apple": {
+    "file": "Red Apple.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Red_Apple.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "Abhijit Tembhekar from Mumbai, India"
+  }
+}
