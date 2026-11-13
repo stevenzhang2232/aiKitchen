@@ -181,3 +181,18 @@ export function tx<T>(db: Db, fn: () => T): T {
     depth--;
   }
 }
+
+export const USER_TABLES = [
+  'batches', 'seasoning_state', 'seasoning_pack', 'favorites', 'preferences', 'cart_items',
+  'to_cook', 'history', 'shelf_life_cache', 'undo_log', 'food_aliases', 'foods',
+];
+
+/** Delete all user data and re-seed the catalog (used by tests and before a restore). */
+export function wipeUserData(db: Db): void {
+  tx(db, () => {
+    for (const t of USER_TABLES) db.exec(`DELETE FROM ${t}`);
+    db.exec("DELETE FROM meta WHERE key = 'pack_seeded'");
+    db.exec("DELETE FROM sqlite_sequence WHERE name IN ('foods','batches','to_cook','history')");
+  });
+  seedCatalog(db);
+}

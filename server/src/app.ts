@@ -1,7 +1,7 @@
 import Fastify, { type FastifyInstance } from 'fastify';
 import fastifyStatic from '@fastify/static';
 import fs from 'node:fs';
-import { openDb, type Db } from './db.js';
+import { openDb, wipeUserData, type Db } from './db.js';
 import { Store } from './store.js';
 import { HttpError } from './errors.js';
 import { registerFridgeRoutes } from './routes/fridge.js';
@@ -51,6 +51,13 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
   });
 
   app.get('/api/health', async () => ({ ok: true }));
+  if (process.env.FRIDGE_TEST_HOOKS === '1') {
+    // Only for automated end-to-end tests: start every test from an empty fridge.
+    app.post('/api/test/reset', async () => {
+      wipeUserData(db);
+      return { ok: true };
+    });
+  }
   registerFridgeRoutes(app, store, () => ({}));
 
   if (opts.webDist && fs.existsSync(opts.webDist)) {

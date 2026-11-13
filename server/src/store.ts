@@ -7,6 +7,7 @@ import {
 } from '@kitchen/core';
 import { FRIDGE_ID, tx, type Db } from './db.js';
 import { bad, conflict, notFound } from './errors.js';
+import { CATALOG } from './catalog.js';
 
 type Row = Record<string, unknown>;
 
@@ -251,9 +252,12 @@ export class Store {
   }
 
   state() {
+    const foods = this.foods();
+    const commonKeys = new Set(CATALOG.filter((c) => c.common).map((c) => c.key));
     return {
       today: this.today(),
-      foods: this.foods(),
+      foods,
+      commonFoods: foods.filter((f) => commonKeys.has(f.key)).map((f) => f.id),
       batches: this.batches(),
       seasonings: this.seasonings(),
       pack: this.pack(),
