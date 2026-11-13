@@ -7,7 +7,8 @@ import { HttpError } from './errors.js';
 import { registerFridgeRoutes } from './routes/fridge.js';
 import { registerAiRoutes } from './routes/ai.js';
 import { registerCookRoutes } from './routes/cook.js';
-import { AiConfigStore, capabilities } from './ai/config.js';
+import { registerBackupRoutes } from './routes/backup.js';
+import { AiConfigStore, capabilities, DEFAULT_AI_CONFIG } from './ai/config.js';
 import { RealAiService, type AiService } from './ai/service.js';
 import { MockAiService } from './ai/mock.js';
 import { ShelfLifeWorker } from './ai/shelfLifeWorker.js';
@@ -95,6 +96,7 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
     app.post('/api/test/reset', async () => {
       await worker.idle();
       wipeUserData(db);
+      config.save({ ...DEFAULT_AI_CONFIG });
       mock.offline = false;
       aiMode = 'off';
       return { ok: true };
@@ -114,6 +116,7 @@ export async function buildApp(opts: AppOptions): Promise<FastifyInstance> {
   registerFridgeRoutes(app, store, () => ({ ai: aiInfo() }));
   registerAiRoutes(app, { store, config, getAi, worker });
   registerCookRoutes(app, { store, getAi });
+  registerBackupRoutes(app, { db, store, dataDir: opts.dataDir, worker });
 
   if (opts.webDist && fs.existsSync(opts.webDist)) {
     await app.register(fastifyStatic, { root: opts.webDist, wildcard: false });
